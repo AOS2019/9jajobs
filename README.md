@@ -20,30 +20,30 @@
 
 ![](/public/assets/img/Page%20Demo.gif)
 
-## 🧐 Features
+## 🧐 Features  
 
-- Powered by: HTML5 I CSS3 I jQuery I Sass I Bootstrap v3.3.6 I Angular js I Material Design Lite
-- Code: Semantically Correct I HTML5 Validated I Fully Optimized I Well Commented
-- Cross Browser Support: Internet Explorer 8+ I Firefox I Safari I Opera I Chrome
-- Layout: Mobile First Layout I Fully Responsive I Minimal and Clean Material Design
-- Fonts: Material Icon Font I Google Web Fonts
-- Easy to Use and customizable
-- SEO Optimized
-- Well documented
+- **Powered by:** Next.js | Express | Node.js | MongoDB | Tailwind CSS  
+- **Code:** Optimized Performance | Server-Side Rendering (SSR) | Well-Structured & Commented Code  
+- **Cross Browser Support:** Chrome | Firefox | Safari | Edge | Opera  
+- **Layout:** Fully Responsive | Mobile-First Design | User-Friendly Interface  
+- **User Features:** Job Posting & Sharing | Advanced Job Search | Real-Time Updates  
+- **SEO Optimized** for better job listing visibility  
+- **Easy to Use and Customizable**  
+- **Secure & Scalable** Architecture  
 
-## 💻 Built with (Sources and Credits)
+## 💻 Built with (Sources and Credits)  
 
-- www.unsplash.com
-- https://fonts.google.com/specimen/Roboto
-- http://zavoloklom.github.io/material-design-iconic-font/
-- http://jquery.com
-- https://material.io/icons/
-- http://getbootstrap.com/
-- https://getmdl.io/components/index.html
+- [Next.js](https://nextjs.org/)  
+- [Express.js](https://expressjs.com/)  
+- [MongoDB](https://www.mongodb.com/)  
+- [Tailwind CSS](https://tailwindcss.com/)  
+- [Google Fonts](https://fonts.google.com/)  
+- [React Icons](https://react-icons.github.io/react-icons/)  
+- [Vercel](https://vercel.com/) for Deployment
 
 
 
-## Contributors ✨
+## Creator ✨
 
 <table>
 	<tr>
