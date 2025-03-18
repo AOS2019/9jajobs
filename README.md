@@ -1,13 +1,13 @@
-# 9jajobs
+# 9jajobs - Discover the Latest Job Vacancies in Nigeria
 
-<p align="center"><img alt="linkpe app" src="/public/assets/img/Home%20page.jpg" width="300vw"/></p>
+<p align="center"><img alt="linkpe app" src="/public/assets/img/Page%20Demo.gif" width="300vw"/></p>
 <p align="center">
 	<!-- <a href="https://github.com/AOS2019"><img alt="Devloper" src=""/></a> -->
 	<a href="https://github.com/AOS2019/9jajobs/LICENSE"><img alt="License" src="https://img.shields.io/github/license/PtPrashantTripathi/ptprashanttripathi.github.io.svg?style=flat-square"/></a>
 	<!--<a href="https://github.com/AOS2019/9jajobs/"><img alt="Website Status" src="https://img.shields.io/website/http/ptprashanttripathi.github.io.svg?down_message=Down&up_message=Online&style=flat-square"/></a>-->
 </p>
 <p align="center">
-	<a href="https://aos2019.github.io/myportfolio">View Demo</a>·
+	<a href="https://github.com/AOS2019/9jajobs">View Demo</a>·
 	<a href="https://github.com/AOS2019/9jajobs/issues/new/choose">Report Bug</a>·
 	<a href="https://github.com/AOS2019/9jajobs/issues/new/choose">Request Feature</a>
 </p>
@@ -18,7 +18,7 @@
 
 ## 🚀 Screenshot 
 
-![](/public/assets/img/Page%20Demo.gif)
+![](/public/assets/img/Home%20page.jpg)
 
 ## 🧐 Features  
 
