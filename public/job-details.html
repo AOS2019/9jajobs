@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9jaJobPortal - Job Details</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #0073e6;
+        }
+
+        .job-details {
+            margin-bottom: 20px;
+        }
+
+        .job-details p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #0073e6;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        .back-button:hover {
+            background: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>9jaJobPortal</h1>
+        <p>Discover the Latest Job Vacancies in Nigeria</p>
+    </header>
+
+    <nav>
+        <a href="#" id="homeBtn">Home</a>
+        <a href="#postJobForm" id="postJobBtn">Post a Job</a>
+        <a href="#">Contact Us</a>
+    </nav>
+    <div class="container">
+        <div id="jobDetail"></div>
+        <a href="index.html" class="back-button">Back to Job Listings</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 9jaJobPortal. All Rights Reserved.</p>
+    </footer>
+
+    <script src="assets/js/js.js"></script>
+    <script src="assets/js/job-details.js"></script>
+</body>
+</html>

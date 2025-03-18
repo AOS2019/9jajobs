@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9jaJobPortal - Latest Job Vacancies in Nigeria</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>9jaJobPortal</h1>
+        <p>Discover the Latest Job Vacancies in Nigeria</p>
+    </header>
+
+    <nav>
+        <a href="#" id="homeBtn">Home</a>
+        <a href="#postJobForm" id="postJobBtn">Post a Job</a>
+        <a href="#">Contact Us</a>
+    </nav>
+
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search for jobs...">
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <div id="jobListings"></div>
+
+        <div class="form-container" id="postJobForm">
+            <h3>Post a New Job</h3>
+            <input type="text" id="jobTitle" placeholder="Job Title" required>
+            <input type="text" id="companyName" placeholder="Company Name" required>
+            <input type="text" id="location" placeholder="Location" required>
+            <textarea id="jobDescription" placeholder="Job Description" required></textarea>
+            <input type="text" id="keyResponsibilities" placeholder="Key Responsibilities. Please seperate by commas" required>
+            <input type="text" id="requiredSkills" placeholder="Required Skills. Please seperate by commas" required>
+            <input type="date" id="closingDate" placeholder="Closing Date" required>
+            <input type="text" id="applicationMethod" placeholder="Method of Application e.g email or link" required>
+            <button id="submitJob">Submit Job</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 9jaJobPortal. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Success Message Script -->
+<script>
+  document.getElementById('submitJob').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default behavior if inside a form
+  
+    // Create the success message element
+    var successMessage = document.createElement('div');
+    successMessage.innerHTML = "Job post submitted successfully!";
+    
+    // Style the message for a colorful, attractive look
+    successMessage.style.position = 'fixed';
+    successMessage.style.top = '50%';
+    successMessage.style.left = '50%';
+    successMessage.style.transform = 'translate(-50%, -50%)';
+    successMessage.style.background = 'linear-gradient(135deg, #f093fb, #f5576c)';
+    successMessage.style.color = '#fff';
+    successMessage.style.padding = '20px 40px';
+    successMessage.style.fontSize = '24px';
+    successMessage.style.borderRadius = '8px';
+    successMessage.style.boxShadow = '0 2px 10px rgba(0,0,0,0.3)';
+    successMessage.style.zIndex = '9999';
+    successMessage.style.textAlign = 'center';
+    successMessage.style.opacity = '0';
+    successMessage.style.transition = 'opacity 0.5s ease-in-out';
+    
+    // Append the message to the body
+    document.body.appendChild(successMessage);
+    
+    // Animate the message (fade in)
+    setTimeout(function() {
+      successMessage.style.opacity = '1';
+    }, 100);
+    
+    // After 2 seconds, fade out the message and refresh the page
+    setTimeout(function() {
+      successMessage.style.opacity = '0';
+      setTimeout(function() {
+        // Remove the message element
+        successMessage.remove();
+        // Refresh the page to clear the form for a new submission
+        location.reload();
+      }, 500); // Allow time for fade-out transition
+    }, 1000);
+  });
+  </script>
+
+    <script>
+        document.getElementById('submitJob').addEventListener('click', function(e) {
+          e.preventDefault(); // Prevent default form submission
+        
+          // Gather input values
+          const jobTitle = document.getElementById('jobTitle').value;
+          const companyName = document.getElementById('companyName').value;
+          const location = document.getElementById('location').value;
+          const jobDescription = document.getElementById('jobDescription').value;
+          const keyResponsibilities = document.getElementById('keyResponsibilities').value;
+          const requiredSkills = document.getElementById('requiredSkills').value;
+          const closingDate = document.getElementById('closingDate').value;
+          const applicationMethod = document.getElementById('applicationMethod').value;
+        
+          // Build the new job object (note: id will be assigned by the server)
+          const newJob = {
+            title: jobTitle,
+            company: companyName,
+            location: location,
+            description: jobDescription,
+            keyResponsibilities: keyResponsibilities,
+            requiredSkills: requiredSkills,
+            closingDate: closingDate,
+            applicationMethod: applicationMethod,
+            // We set datePosted to the current date (adjust formatting as needed)
+            datePosted: new Date().toISOString().split('T')[0]
+          };
+        
+          // Send the new job data to the server
+          fetch('/api/postJob', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newJob)
+          })
+          .then(response => response.json())
+          .then(data => {
+            console.log('Job posted successfully:', data);
+            // Optionally, give user feedback or reset the form here
+          })
+          .catch(error => console.error('Error posting job:', error));
+        });
+        </script>
+    <script src="assets/js/js.js"></script>
+    <script src="assets/js/jobs.js"></script>
+    <!-- python -m http.server 8000 -->
+</body>
+</html>
